@@ -8,7 +8,7 @@ Portkey helps bring Mistral's APIs to production with its observability suite & 
 1. Obtain your [**Portkey API Key**](https://app.portkey.ai/).
 2. Set `$ export PORTKEY_API_KEY=PORTKEY_API_KEY`
 3. Set `$ export MISTRAL_API_KEY=MISTRAL_API_KEY`
-4. `pip install portkey-ai` or `npm i portkey-ai`
+4. `pip install portkey-ai` or `bun i portkey-ai`
 
 ```py
 """ OPENAI PYTHON SDK """

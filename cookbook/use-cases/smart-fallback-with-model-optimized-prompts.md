@@ -10,7 +10,7 @@ Let’s get started
 
 ## 1. Import and Authenticate Portkey SDK
 
-Start by importing Portkey SDK into your NodeJS project using npm and authenticate by passing the Portkey API Key.
+Start by importing Portkey SDK into your NodeJS project using bun and authenticate by passing the Portkey API Key.
 
 ```js
 import { Portkey } from 'portkey-ai';

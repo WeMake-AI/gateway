@@ -176,7 +176,7 @@ To build plugins into your Gateway, follow these steps:
 3. Run the build command to compile the plugins:
 
 ```
-npm run build-plugins
+bun run build-plugins
 ```
 
 This command will compile the plugins and prepare them for use with the Gateway.
@@ -187,15 +187,15 @@ Once you've built the plugins, they will be automatically deployed with the Gate
 
 - For development:
   ```
-  npm run dev
+  bun run dev
   ```
 - For Node.js:
   ```
-  npm run dev:node
+  bun run dev:node
   ```
 - For Cloudflare Workers:
   ```
-  npm run dev:workerd
+  bun run dev:workerd
   ```
 
 The guardrail plugins you've enabled in the `conf.json` file will be loaded and ready to use.

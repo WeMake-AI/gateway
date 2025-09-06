@@ -16,9 +16,9 @@ Use Portkey with your Vercel app for:
 Go ahead and create a Next.js application, and install `ai` and `portkey-ai` as dependencies.
 
 ```sh
-pnpm dlx create-next-app my-ai-app
+bunx create-next-app my-ai-app
 cd my-ai-app
-pnpm install ai portkey-ai
+bun install ai portkey-ai
 ```
 
 ### 2. Add Authentication keys to `.env`

@@ -15,7 +15,7 @@ You should have the [Portkey API Key](https://portkey.ai/docs/api-reference/auth
 Start by installing the `portkey-ai` to your NodeJS project.
 
 ```sh
-npm i --save portkey-ai
+bun i --save portkey-ai
 ```
 
 Once installed, you can import it and instantiate it with the API key to your Portkey account.

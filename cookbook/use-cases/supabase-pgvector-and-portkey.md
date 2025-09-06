@@ -61,7 +61,7 @@ We want to store embeddings in your database. To enable the database to store em
 Navigate into any of your desired directories and run
 
 ```sh
-npm init -y
+bun init
 ```
 
 See the project files creates with `package.json`. Since we want to store the list of articles to database, we have to read them for a file. Create `articles.txt` and copy the following:

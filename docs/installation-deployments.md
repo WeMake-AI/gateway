@@ -14,7 +14,7 @@ Check out the [API docs](https://portkey.ai/docs/welcome/make-your-first-request
 
 ## Local Deployment
 
-1. Do [NPM](#node) or [Bun](#bun) Install
+1. Do [Bun](#bun) Install
 2. Run a [Node.js Server](#nodejs-server)
 3. Deploy on [App Stack](#deploy-to-app-stack)
 4. Deploy on [Cloudflare Workers](#cloudflare-workers)
@@ -30,7 +30,7 @@ Check out the [API docs](https://portkey.ai/docs/welcome/make-your-first-request
 ### Node
 
 ```sh
-$ npx @portkey-ai/gateway
+$ npx @wemake.cx/gateway
 ```
 
 <br>
@@ -38,7 +38,7 @@ $ npx @portkey-ai/gateway
 ### Bun
 
 ```sh
-$ bunx @portkey-ai/gateway
+$ bunx @wemake.cx/gateway
 ```
 
 <br>
@@ -54,12 +54,12 @@ $ bunx @portkey-ai/gateway
 git clone https://github.com/portkey-ai/gateway
 ```
 
-2. Install the NPM Dependencies
+2. Install the Dependencies
 
 ```sh
 cd gateway
-npm i
-npm run build
+bun i
+bun run build
 ```
 
 3. Run the Server
@@ -187,13 +187,13 @@ git clone https://github.com/portkey-ai/gateway
 
 ```sh
 cd gateway
-npm install
+bun install
 ```
 
 3. Deploy (using [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/))
 
 ```sh
-npm run deploy
+bun run deploy
 ```
 
 For more details, refer to [Cloudflare Workers official](https://developers.cloudflare.com/workers/).
@@ -410,7 +410,7 @@ git clone https://github.com/portkey-ai/gateway
 3. Install Fastly’s CLI:
 
 ```sh
-npm install fastly-cli
+bun install fastly-cli
 ```
 
 4. Log in to Fastly:

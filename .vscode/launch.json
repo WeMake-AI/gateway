@@ -1,7 +1,7 @@
 {
   /*
     1. steps to run wrangler debugger (https://blog.cloudflare.com/debugging-cloudflare-workers/)
-    - run `npm run dev` in a terminal
+    - run `bun run dev` in a terminal
     - in debug and run tab, select 'Wrangler debug' and run
     - add a breakpoint and verify
     
