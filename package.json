@@ -13,7 +13,7 @@
     "LLM",
     "OpenAI"
   ],
-  "author": "WeMake-AI <hey@portkey.ai>",
+  "author": "WeMake-AI <hey@wemake.cx>",
   "license": "MIT",
   "files": [
     "build",
