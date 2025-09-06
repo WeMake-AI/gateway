@@ -42,7 +42,7 @@ $ bunx @wemake.cx/gateway
 1. Clone the Repository
 
 ```sh
-git clone https://github.com/portkey-ai/gateway
+git clone https://github.com/WeMake-AI/gateway
 ```
 
 2. Install the Dependencies
@@ -104,7 +104,7 @@ Save the response in a YAML file for later use.
 3. Copy the deployment YAML
 
 ```shell
-wget https://raw.githubusercontent.com/Portkey-AI/gateway/main/deployment.yaml
+wget https://raw.githubusercontent.com/WeMake-AI/gateway/main/deployment.yaml
 ```
 
 4. Apply the manifest
@@ -184,7 +184,7 @@ in addition to the response headers, you should get a response body like
 1. Clone the Repository
 
 ```sh
-git clone https://github.com/portkey-ai/gateway
+git clone https://github.com/WeMake-AI/gateway
 ```
 
 2. Install the NPM Dependencies
@@ -224,7 +224,7 @@ For more information on the Docker image, check [here](https://hub.docker.com/r/
 1. Download Compose File from the Repository:
 
 ```sh
-wget "https://raw.githubusercontent.com/Portkey-AI/gateway/main/docker-compose.yaml"
+wget "https://raw.githubusercontent.com/WeMake-AI/gateway/main/docker-compose.yaml"
 ```
 
 2. Run:
@@ -379,7 +379,7 @@ Outputs:
 1. Clone the Repository:
 
 ```sh
-git clone https://github.com/portkey-ai/gateway
+git clone https://github.com/WeMake-AI/gateway
 ```
 
 2. Set up a Supabase Account and create a new project (in browser).
@@ -413,7 +413,7 @@ Refer to [Supabase's official documentation](https://supabase.com/docs) for more
 2. Clone the Gateway Repository:
 
 ```sh
-git clone https://github.com/portkey-ai/gateway
+git clone https://github.com/WeMake-AI/gateway
 ```
 
 3. Install Fastly’s CLI:
