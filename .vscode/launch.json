@@ -33,7 +33,7 @@
         "../src/*": "${workspaceFolder}/src/*"
       },
       "skipFiles": ["<node_internals>/**"],
-      "preLaunchTask": "npx tsc",
+      "preLaunchTask": "bunx tsc",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "postDebugTask": "cleanup build"

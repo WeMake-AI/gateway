@@ -1,7 +1,3 @@
-<p align="right">
-   <strong>English</strong> | <a href="./.github/README.cn.md">中文</a> | <a href="./.github/README.jp.md">日本語</a>
-</p>
-
 <div align="center">
 
 <a href="https://portkey.sh/report-github"><img src="https://raw.githubusercontent.com/siddharthsambharia-portkey/Portkey-Product-Images/refs/heads/main/LLM%20Report%20Campaign%20Frame.png"></img></a>
@@ -12,14 +8,6 @@
 #### Route to 250+ LLMs with 1 fast & friendly API
 
 <img src="https://cfassets.portkey.ai/sdk.gif" width="550px" alt="Portkey AI Gateway Demo showing LLM routing capabilities" style="margin-left:-35px">
-
-[Docs](https://portkey.wiki/gh-1) | [Enterprise](https://portkey.wiki/gh-2) | [Hosted Gateway](https://portkey.wiki/gh-3) | [Changelog](https://portkey.wiki/gh-4) | [API Reference](https://portkey.wiki/gh-5)
-
-[![License](https://img.shields.io/github/license/Ileriayo/markdown-badges)](./LICENSE)
-[![Discord](https://img.shields.io/discord/1143393887742861333)](https://portkey.wiki/gh-6)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter/follow/portkeyai?style=social&label=Follow%20%40PortkeyAI)](https://portkey.wiki/gh-7)
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/q94g.svg)](https://portkey.wiki/gh-9)
-
 </div>
 
 <br/>
@@ -58,7 +46,7 @@ The [**AI Gateway**](https://portkey.wiki/gh-10) is designed for fast, reliable 
 
 ```bash
 # Run the gateway locally (needs Node.js and bun)
-npx @wemake.cx/gateway
+bunx @wemake.cx/gateway
 ```
 
 > The Gateway is running on `http://localhost:8787/v1`

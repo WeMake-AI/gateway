@@ -1,6 +1,7 @@
 # Portkey Gateway Plugins
 
 ## Table of Contents
+
 - [Portkey Gateway Plugins](#portkey-gateway-plugins)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -132,7 +133,12 @@ The `manifest.json` file defines the plugin's properties, required credentials, 
 Create a TypeScript file (e.g., `main-function.ts`) that exports a handler function. This function will implement your guardrail logic. Here's a basic structure:
 
 ```typescript
-import { HookEventType, PluginContext, PluginHandler, PluginParameters } from '../types';
+import {
+  HookEventType,
+  PluginContext,
+  PluginHandler,
+  PluginParameters,
+} from '../types';
 
 export const handler: PluginHandler = async (
   context: PluginContext,
@@ -149,7 +155,7 @@ export const handler: PluginHandler = async (
   return {
     error: null, // or error object if an error occurred
     verdict: true, // or false to indicate if the guardrail passed or failed
-    data: {} // any additional data you want to return
+    data: {}, // any additional data you want to return
   };
 };
 ```
@@ -208,7 +214,7 @@ To test your guardrail plugins:
 2. Run the test command:
 
 ```
-npx jest
+bunx jest
 ```
 
 This command will execute the test files in the plugins repository, allowing you to verify that your guardrail plugins are functioning correctly.

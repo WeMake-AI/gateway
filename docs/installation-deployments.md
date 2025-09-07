@@ -391,7 +391,7 @@ git clone https://github.com/WeMake-AI/gateway
 supabase/functions/your-function-file/index.ts
 ```
 
-5. Deploy the Function (for windows add `npx` in start):
+5. Deploy the Function (for windows add `bunx` in start):
 
 ```sh
 supabase functions deploy your-function-file
