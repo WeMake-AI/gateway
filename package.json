@@ -1,10 +1,10 @@
 {
-  "name": "@portkey-ai/gateway",
+  "name": "@wemake.cx/gateway",
   "version": "1.11.3",
   "description": "A fast AI gateway by Portkey",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Portkey-AI/gateway.git"
+    "url": "git+https://github.com/WeMake-AI/gateway.git"
   },
   "keywords": [
     "AI gateway",
@@ -13,7 +13,7 @@
     "LLM",
     "OpenAI"
   ],
-  "author": "portkey-ai <support@portkey.ai>",
+  "author": "WeMake-AI <hey@wemake.cx>",
   "license": "MIT",
   "files": [
     "build",
@@ -30,13 +30,13 @@
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "build": "rollup -c",
     "build-plugins": "tsx plugins/build.ts",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "bun run build",
     "start:node": "node build/start-server.js",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json}\"",
     "test:gateway": "jest src/",
     "test:plugins": "jest plugins/",
-    "pre-push": "npm run build && node start-test.js",
+    "pre-push": "bun run build && node start-test.js",
     "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky",
     "postinstall": "patch-package"
   },
@@ -74,7 +74,7 @@
     "ts-jest": "^29.2.4",
     "tsx": "^4.7.0",
     "typescript-eslint": "^8.1.0",
-    "wrangler": "^3.97.0"
+    "wrangler": "4"
   },
   "bin": "build/start-server.js",
   "type": "module"

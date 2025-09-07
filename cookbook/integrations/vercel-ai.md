@@ -16,9 +16,9 @@ Use Portkey with your Vercel app for:
 Go ahead and create a Next.js application, and install `ai` and `portkey-ai` as dependencies.
 
 ```sh
-pnpm dlx create-next-app my-ai-app
+bunx create-next-app my-ai-app
 cd my-ai-app
-pnpm install ai portkey-ai
+bun install ai portkey-ai
 ```
 
 ### 2. Add Authentication keys to `.env`
@@ -48,7 +48,7 @@ import { Portkey } from 'portkey-ai';
 // Create a Portkey API client
 const portkey = new Portkey({
   apiKey: process.env.PORTKEY_API_KEY,
-  virtualKey: process.env.OPENAI_VIRTUAL_KEY
+  virtualKey: process.env.OPENAI_VIRTUAL_KEY,
 });
 
 // Set the runtime to edge for best performance
@@ -61,7 +61,7 @@ export async function POST(req: Request) {
   const response = await portkey.chat.completions.create({
     model: 'gpt-4',
     stream: true,
-    messages
+    messages,
   });
 
   // Convert the response into a friendly text-stream
@@ -77,7 +77,7 @@ Portkey follows the same signature as OpenAI SDK but extends it to work with **1
 
 ### 4. Switch from OpenAI to Anthropic
 
-Portkey is powered by an [open-source, universal AI Gateway](https://github.com/portkey-ai/gateway) with which you can route to 100+ LLMs using the same, known OpenAI spec.
+Portkey is powered by an [open-source, universal AI Gateway](https://github.com/WeMake-AI/gateway) with which you can route to 100+ LLMs using the same, known OpenAI spec.
 
 Let’s see how you can switch from GPT-4 to Claude-3-Opus by updating 2 lines of code (without breaking anything else).
 
@@ -181,13 +181,18 @@ On Portkey, while making a `chat.completions` call, you can pass any `{"key":"va
 const response = await portkey.chat.completions.create(
   {
     model: 'gpt-4',
-    messages: [{ role: 'user', content: 'How do I optimise auditorium for maximum occupancy?' }]
+    messages: [
+      {
+        role: 'user',
+        content: 'How do I optimise auditorium for maximum occupancy?',
+      },
+    ],
   },
   {
     metadata: {
       user_name: 'john doe',
-      organization_name: 'acme'
-    }
+      organization_name: 'acme',
+    },
   }
 );
 ```
@@ -206,7 +211,10 @@ For example, for setting up a fallback from OpenAI to Anthropic, the Gateway Con
 ```json
 {
   "strategy": { "mode": "fallback" },
-  "targets": [{ "virtual_key": "openai-virtual-key" }, { "virtual_key": "anthropic-virtual-key" }]
+  "targets": [
+    { "virtual_key": "openai-virtual-key" },
+    { "virtual_key": "anthropic-virtual-key" }
+  ]
 }
 ```
 
@@ -217,7 +225,7 @@ You can save this Config in Portkey app and get an associated Config ID that you
 ```tsx
 const portkey = new Portkey({
   apiKey: process.env.PORTKEY_API_KEY,
-  config: 'CONFIG_ID'
+  config: 'CONFIG_ID',
 });
 
 export async function POST(req: Request) {
@@ -226,7 +234,7 @@ export async function POST(req: Request) {
   const response = await portkey.chat.completions.create({
     model: 'gpt-4',
     stream: true,
-    messages
+    messages,
   });
 
   const stream = OpenAIStream(response);

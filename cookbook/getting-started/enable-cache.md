@@ -28,7 +28,7 @@ Let's utilize the Portkey Client SDK to send chat completion requests and attach
 To install it, type the following in your NodeJS environment:
 
 ```sh
-npm install portkey-ai
+bun install portkey-ai
 ```
 
 Instantiate Portkey instance

@@ -5,8 +5,8 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "npx tsc",
-      "command": "npx",
+      "label": "bunx tsc",
+      "command": "bunx",
       "args": [
         "tsc",
         "--sourcemap",

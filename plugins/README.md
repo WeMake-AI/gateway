@@ -1,6 +1,7 @@
 # Portkey Gateway Plugins
 
 ## Table of Contents
+
 - [Portkey Gateway Plugins](#portkey-gateway-plugins)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -132,7 +133,12 @@ The `manifest.json` file defines the plugin's properties, required credentials, 
 Create a TypeScript file (e.g., `main-function.ts`) that exports a handler function. This function will implement your guardrail logic. Here's a basic structure:
 
 ```typescript
-import { HookEventType, PluginContext, PluginHandler, PluginParameters } from '../types';
+import {
+  HookEventType,
+  PluginContext,
+  PluginHandler,
+  PluginParameters,
+} from '../types';
 
 export const handler: PluginHandler = async (
   context: PluginContext,
@@ -149,7 +155,7 @@ export const handler: PluginHandler = async (
   return {
     error: null, // or error object if an error occurred
     verdict: true, // or false to indicate if the guardrail passed or failed
-    data: {} // any additional data you want to return
+    data: {}, // any additional data you want to return
   };
 };
 ```
@@ -176,7 +182,7 @@ To build plugins into your Gateway, follow these steps:
 3. Run the build command to compile the plugins:
 
 ```
-npm run build-plugins
+bun run build-plugins
 ```
 
 This command will compile the plugins and prepare them for use with the Gateway.
@@ -187,15 +193,15 @@ Once you've built the plugins, they will be automatically deployed with the Gate
 
 - For development:
   ```
-  npm run dev
+  bun run dev
   ```
 - For Node.js:
   ```
-  npm run dev:node
+  bun run dev:node
   ```
 - For Cloudflare Workers:
   ```
-  npm run dev:workerd
+  bun run dev:workerd
   ```
 
 The guardrail plugins you've enabled in the `conf.json` file will be loaded and ready to use.
@@ -208,7 +214,7 @@ To test your guardrail plugins:
 2. Run the test command:
 
 ```
-npx jest
+bunx jest
 ```
 
 This command will execute the test files in the plugins repository, allowing you to verify that your guardrail plugins are functioning correctly.

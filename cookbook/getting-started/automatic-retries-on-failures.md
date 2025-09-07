@@ -18,7 +18,7 @@ Portkey forwards your requests to your desired model and relays the response to 
 To install it, type the following in your NodeJS environment:
 
 ```sh
-npm install portkey-ai
+bun install portkey-ai
 ```
 
 Import `Portkey` and instantiate it using the Portkey API Key

@@ -11,19 +11,19 @@ COPY patches ./
 # Upgrade system packages
 RUN apk upgrade --no-cache
 
-# Upgrade npm to version 10.9.2
-RUN npm install -g npm@10.9.2
+# Upgrade bun to version 10.9.2
+RUN bun install -g bun@10.9.2
 
 # Install app dependencies
-RUN npm install
+RUN bun install
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the application and clean up
-RUN npm run build \
+RUN bun run build \
 && rm -rf node_modules \
-&& npm install --omit=dev
+&& bun install --omit=dev
 
 # Use the official Node.js runtime as a parent image
 FROM node:20-alpine
@@ -31,8 +31,8 @@ FROM node:20-alpine
 # Upgrade system packages
 RUN apk upgrade --no-cache
 
-# Upgrade npm to version 10.9.2
-RUN npm install -g npm@10.9.2
+# Upgrade bun to version 10.9.2
+RUN bun install -g bun@10.9.2
 
 # Set the working directory in the container
 WORKDIR /app
@@ -46,5 +46,5 @@ COPY --from=build /app/patches /app/patches
 # Expose port 8787
 EXPOSE 8787
 
-ENTRYPOINT ["npm"]
+ENTRYPOINT ["bun"]
 CMD ["run", "start:node"]

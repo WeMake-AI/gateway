@@ -29,8 +29,8 @@ Copyhttp://localhost:3000
 ### 1. Installation
 
 ```sh
-npm install @portkey-ai/vercel-provider
-npm install
+bun install @portkey-ai/vercel-provider
+bun install
 ```
 
 ### 3. Configure API Keys
@@ -62,7 +62,7 @@ Add your API keys to the appropriate configuration file. This step is crucial fo
 
 
 ### 4. Start the App
-Once you've completed the above steps use `npm run dev` to run your app locally. You can access it at:
+Once you've completed the above steps use `bun run dev` to run your app locally. You can access it at:
 `http://localhost:3000`
 
 Portkey's configs are a powerful way to manage & govern your app's behaviour. Learn more about Configs [here](https://docs.portkey.ai).
